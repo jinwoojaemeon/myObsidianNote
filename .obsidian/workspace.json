@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "2177a9e9c08695cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "7eb701b53daafc59",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f160edbeafd50bac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spring/H2 Database (H2 데이터베이스).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "H2 Database (H2 데이터베이스)"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0020a0b6bdeb91e1",
+    "type": "split",
+    "children": [
+      {
+        "id": "187ae6e4136c80d9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48e7259bc11235ce",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c568bff085ef8909",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "063307d8c8dedf0a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 318.5026054382324
+  },
+  "right": {
+    "id": "1d89e6b3080b5da9",
+    "type": "split",
+    "children": [
+      {
+        "id": "32f9c50dfd3abf16",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "717c259c2a8bbf5a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Java/가비지 컬렉션 (Garbage Collection).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 가비지 컬렉션 (Garbage Collection)"
+            }
+          },
+          {
+            "id": "648ee680537159bd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Java/가비지 컬렉션 (Garbage Collection).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 가비지 컬렉션 (Garbage Collection)"
+            }
+          },
+          {
+            "id": "b12a622913e04d79",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7748218104f1d33c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Java/객체지향 프로그래밍 (OOP).md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 객체지향 프로그래밍 (OOP)"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "f160edbeafd50bac",
+  "lastOpenFiles": [
+    "Spring/JPA 엔티티 매핑.md",
+    "Java/자바 제네릭 (Generics).md",
+    "Spring/N+1 문제 (JPA).md",
+    "Spring/JPA와 ORM (SQL 중심 개발 vs ORM).md",
+    "Java/자바 컴파일.md",
+    "Spring/DTO (Data Transfer Object).md",
+    "Spring/API (Application Programming Interface).md",
+    "Java/접근제어자 (Access Modifier).md",
+    "Java/자바 예외 처리 (Exception).md",
+    "Java/가비지 컬렉션 (Garbage Collection).md",
+    "Spring/H2 Database (H2 데이터베이스).md",
+    "Spring/RESTful API (REST API).md",
+    "Java/상속과 컴포지션 (Inheritance vs Composition).md",
+    "Java/인스턴스, 변수, 참조변수.md",
+    "Java/Collections Framework (컬렉션 프레임워크).md",
+    "Spring",
+    "Java/오버로딩과 오버라이딩 (Overloading vs Overriding).md",
+    "Java/객체지향 프로그래밍 (OOP).md",
+    "Java/SOLID 원칙 (객체지향 설계 원칙).md",
+    "Java/자바는 컴파일 언어인가 인터프리터 언어인가.md",
+    "Java/JVM Runtime Data Area - 메모리 구조.md",
+    "Java/자바 다형성 (Polymorphism).md",
+    "Java/Heap 메모리.md",
+    "images.png",
+    "Java/JVM (Java Virtual Machine, 자바 가상 머신).md",
+    "Java/Stack 메모리.md",
+    "react/클라이언트 사이드 렌더링.md",
+    "react/가상 DOM.md",
+    "react",
+    "Java",
+    "Javascript",
+    "템플릿",
+    "템플리",
+    "06_module/utils.js",
+    "06_module/index.js",
+    "06_module/index.html",
+    "06_module"
+  ]
+}

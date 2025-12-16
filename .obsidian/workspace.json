@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/RDBMS (관계형 데이터베이스 관리 시스템).md",
+                "file": "Java/람다 표현식 (Lambda Expression).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RDBMS (관계형 데이터베이스 관리 시스템)"
+              "title": "람다 표현식 (Lambda Expression)"
             }
           }
         ]
@@ -172,7 +172,16 @@
   },
   "active": "f160edbeafd50bac",
   "lastOpenFiles": [
+    "Spring/JPQL과 객체지향 쿼리 언어.md",
+    "Java/Optional.md",
+    "Java/Stream API.md",
+    "Java/메서드 참조 (Method Reference).md",
+    "Java/Postman (API 테스트 도구).md",
     "Java/빌더 패턴 (Builder Pattern).md",
+    "Java/Stack 메모리.md",
+    "Java/가비지 컬렉션 (Garbage Collection).md",
+    "Java/람다 표현식 (Lambda Expression).md",
+    "SQL/RDBMS (관계형 데이터베이스 관리 시스템).md",
     "Spring/JPA 엔티티 매핑.md",
     "react/React 개발 도구와 라이브러리.md",
     "react/React 비동기 처리 (Promise, async-await, fetch, axios).md",
@@ -187,18 +196,9 @@
     "Spring/API (Application Programming Interface).md",
     "Java/접근제어자 (Access Modifier).md",
     "Java/자바 예외 처리 (Exception).md",
-    "Java/가비지 컬렉션 (Garbage Collection).md",
     "Spring/RESTful API (REST API).md",
     "Java/상속과 컴포지션 (Inheritance vs Composition).md",
-    "Java/인스턴스, 변수, 참조변수.md",
-    "Java/Collections Framework (컬렉션 프레임워크).md",
     "Spring",
-    "Java/오버로딩과 오버라이딩 (Overloading vs Overriding).md",
-    "Java/객체지향 프로그래밍 (OOP).md",
-    "Java/SOLID 원칙 (객체지향 설계 원칙).md",
-    "Java/자바는 컴파일 언어인가 인터프리터 언어인가.md",
-    "Java/JVM Runtime Data Area - 메모리 구조.md",
-    "Java/자바 다형성 (Polymorphism).md",
     "images.png",
     "react",
     "Java",

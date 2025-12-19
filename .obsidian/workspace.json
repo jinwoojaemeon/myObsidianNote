@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/빌더 패턴 (Builder Pattern).md",
+                "file": "SQL/트랜잭션 (Transaction).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "빌더 패턴 (Builder Pattern)"
+              "title": "트랜잭션 (Transaction)"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5026054382324,
-    "collapsed": true
+    "width": 318.5026054382324
   },
   "right": {
     "id": "1d89e6b3080b5da9",
@@ -173,9 +172,10 @@
   },
   "active": "f160edbeafd50bac",
   "lastOpenFiles": [
+    "SQL/정규화 (Normalization).md",
+    "Java/빌더 패턴 (Builder Pattern).md",
     "Spring/API (Application Programming Interface).md",
     "Spring/RESTful API (REST API).md",
-    "Java/빌더 패턴 (Builder Pattern).md",
     "Java/람다 표현식 (Lambda Expression).md",
     "Spring/JPQL과 객체지향 쿼리 언어.md",
     "Java/Optional.md",
@@ -198,7 +198,6 @@
     "Spring/DTO (Data Transfer Object).md",
     "Java/접근제어자 (Access Modifier).md",
     "Java/자바 예외 처리 (Exception).md",
-    "Java/상속과 컴포지션 (Inheritance vs Composition).md",
     "Spring",
     "images.png",
     "react",

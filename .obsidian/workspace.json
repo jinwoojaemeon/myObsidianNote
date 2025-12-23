@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/트랜잭션 (Transaction).md",
+                "file": "Spring/스프링 프레임워크 (Spring Framework).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "트랜잭션 (Transaction)"
+              "title": "스프링 프레임워크 (Spring Framework)"
             }
           }
         ]
@@ -172,7 +172,9 @@
   },
   "active": "f160edbeafd50bac",
   "lastOpenFiles": [
+    "SQL/DML, DDL, DCL (SQL 언어 분류).md",
     "SQL/정규화 (Normalization).md",
+    "SQL/트랜잭션 (Transaction).md",
     "Java/빌더 패턴 (Builder Pattern).md",
     "Spring/API (Application Programming Interface).md",
     "Spring/RESTful API (REST API).md",
@@ -196,8 +198,6 @@
     "Spring/JPA와 ORM (SQL 중심 개발 vs ORM).md",
     "Java/자바 컴파일.md",
     "Spring/DTO (Data Transfer Object).md",
-    "Java/접근제어자 (Access Modifier).md",
-    "Java/자바 예외 처리 (Exception).md",
     "Spring",
     "images.png",
     "react",

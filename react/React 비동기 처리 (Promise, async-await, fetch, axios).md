@@ -268,22 +268,258 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 
 ### **왜 fetch 대신 axios를 쓸까?**
 
-**fetch의 아쉬운 점**
+axios가 fetch보다 편한 이유를 구체적인 코드 예시로 비교해보겠습니다.
 
-- 응답을 `.json()`으로 한 번 더 파싱해야 함
-- 에러 처리가 복잡함 (HTTP 에러도 `.catch`가 아니라 then에서 분기)
-- POST/PUT 등에서 body, header 세팅이 번거로움
-- timeout, 요청 취소, 인터셉터 등 고급 기능 부족
+#### **1. JSON 파싱이 자동으로 처리됨**
 
-**axios의 장점**
+**fetch 방식:**
+```jsx
+// fetch는 응답을 수동으로 JSON으로 변환해야 함
+fetch("https://api.example.com/posts/1")
+  .then(response => response.json())  // ← 이 단계가 필요!
+  .then(data => {
+    console.log(data);  // 실제 데이터
+  });
+```
 
-- 요청/응답이 자동으로 JSON 변환
-- 에러 처리가 단순
-    - HTTP 상태 에러도 `.catch`로 한 번에 잡힘
-- POST/PUT body/헤더 작성이 간단
-- timeout, 요청 취소, 인터셉터, 응답 가공 등 다양한 고급 기능 지원
-- 구조 분해로 바로 데이터만 받아서 사용 가능
-    - fetch: `res.json()` → axios: `res.data`
+**axios 방식:**
+```jsx
+// axios는 자동으로 JSON으로 변환됨
+axios.get("https://api.example.com/posts/1")
+  .then(response => {
+    console.log(response.data);  // 바로 데이터 사용!
+  });
+```
+
+**차이점:**
+- fetch: `response.json()`을 명시적으로 호출해야 함
+- axios: 자동으로 JSON 파싱되어 `response.data`에 바로 접근 가능
+
+#### **2. 에러 처리가 훨씬 간단함**
+
+**fetch 방식:**
+```jsx
+// fetch는 HTTP 에러(404, 500 등)를 자동으로 catch하지 않음
+fetch("https://api.example.com/posts/999")
+  .then(response => {
+    // HTTP 에러 상태도 성공으로 처리됨!
+    if (!response.ok) {  // ← 수동으로 체크해야 함
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => console.log(data))
+  .catch(error => {
+    // 네트워크 에러만 여기로 옴
+    console.error("에러:", error);
+  });
+```
+
+**axios 방식:**
+```jsx
+// axios는 HTTP 에러도 자동으로 catch로 처리됨
+axios.get("https://api.example.com/posts/999")
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    // 네트워크 에러 + HTTP 에러(404, 500 등) 모두 여기로!
+    console.error("에러:", error.response?.status, error.message);
+  });
+```
+
+**차이점:**
+- fetch: HTTP 에러를 수동으로 체크해야 함 (`response.ok` 확인 필요)
+- axios: HTTP 에러도 자동으로 `.catch`로 처리됨
+
+#### **3. POST/PUT 요청이 더 간단함**
+
+**fetch 방식:**
+```jsx
+// fetch는 body를 JSON.stringify하고 헤더도 직접 설정해야 함
+fetch("https://api.example.com/posts", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",  // ← 직접 설정
+  },
+  body: JSON.stringify({  // ← JSON.stringify 필요
+    title: "새 글",
+    body: "내용",
+    userId: 1,
+  }),
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
+
+**axios 방식:**
+```jsx
+// axios는 자동으로 JSON 변환하고 헤더도 자동 설정
+axios.post("https://api.example.com/posts", {
+  title: "새 글",
+  body: "내용",
+  userId: 1,
+  // 객체를 그대로 전달하면 자동으로 JSON 변환!
+})
+  .then(response => console.log(response.data));
+```
+
+**차이점:**
+- fetch: `JSON.stringify()`와 `Content-Type` 헤더를 직접 설정해야 함
+- axios: 객체를 그대로 전달하면 자동으로 처리됨
+
+#### **4. 인터셉터로 공통 처리 가능**
+
+**fetch 방식:**
+```jsx
+// fetch는 매번 헤더를 설정해야 함
+fetch("https://api.example.com/posts", {
+  headers: {
+    "Authorization": "Bearer token123",  // ← 매번 반복
+    "Content-Type": "application/json",
+  },
+});
+
+fetch("https://api.example.com/users", {
+  headers: {
+    "Authorization": "Bearer token123",  // ← 또 반복
+    "Content-Type": "application/json",
+  },
+});
+```
+
+**axios 방식:**
+```jsx
+// axios는 인터셉터로 한 번만 설정하면 모든 요청에 적용
+axios.interceptors.request.use(config => {
+  config.headers.Authorization = "Bearer token123";
+  return config;
+});
+
+// 이후 모든 요청에 자동으로 토큰이 포함됨
+axios.get("https://api.example.com/posts");
+axios.get("https://api.example.com/users");
+```
+
+**차이점:**
+- fetch: 매 요청마다 헤더를 반복 설정해야 함
+- axios: 인터셉터로 한 번 설정하면 모든 요청에 자동 적용
+
+#### **5. 요청 취소(Cancel)가 간단함**
+
+**fetch 방식:**
+```jsx
+// fetch는 AbortController를 직접 사용해야 함
+const controller = new AbortController();
+
+fetch("https://api.example.com/posts", {
+  signal: controller.signal,
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+// 취소
+controller.abort();
+```
+
+**axios 방식:**
+```jsx
+// axios는 CancelToken이 더 직관적 (구버전) 또는 AbortController 지원
+const source = axios.CancelToken.source();
+
+axios.get("https://api.example.com/posts", {
+  cancelToken: source.token,
+})
+  .then(response => console.log(response.data))
+  .catch(error => {
+    if (axios.isCancel(error)) {
+      console.log("요청 취소됨");
+    }
+  });
+
+// 취소
+source.cancel("요청 취소");
+```
+
+#### **6. 타임아웃 설정이 간단함**
+
+**fetch 방식:**
+```jsx
+// fetch는 타임아웃을 직접 구현해야 함
+const controller = new AbortController();
+const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+fetch("https://api.example.com/posts", {
+  signal: controller.signal,
+})
+  .then(response => {
+    clearTimeout(timeoutId);
+    return response.json();
+  });
+```
+
+**axios 방식:**
+```jsx
+// axios는 timeout 옵션으로 간단하게 설정
+axios.get("https://api.example.com/posts", {
+  timeout: 5000,  // 5초 후 자동 취소
+})
+  .then(response => console.log(response.data));
+```
+
+#### **7. 구조 분해 할당이 더 직관적**
+
+**fetch 방식:**
+```jsx
+fetch("https://api.example.com/posts/1")
+  .then(response => response.json())
+  .then(data => {
+    const { title, body } = data;  // 2단계 필요
+    console.log(title, body);
+  });
+```
+
+**axios 방식:**
+```jsx
+axios.get("https://api.example.com/posts/1")
+  .then(({ data }) => {  // 바로 구조 분해 가능!
+    const { title, body } = data;
+    console.log(title, body);
+  });
+```
+
+#### **8. 전역 설정이 가능함**
+
+**axios 방식:**
+```jsx
+// axios는 한 번 설정하면 모든 요청에 적용
+axios.defaults.baseURL = "https://api.example.com";
+axios.defaults.headers.common["Authorization"] = "Bearer token123";
+axios.defaults.timeout = 5000;
+
+// 이후 간단하게 사용
+axios.get("/posts");  // baseURL 자동 적용
+axios.post("/users", { name: "홍길동" });
+```
+
+**fetch는 이런 전역 설정이 없어서 매번 전체 URL과 헤더를 작성해야 함**
+
+---
+
+### **요약: axios가 fetch보다 편한 이유**
+
+| 기능 | fetch | axios |
+|------|-------|-------|
+| **JSON 파싱** | 수동 (`response.json()`) | 자동 (`response.data`) |
+| **에러 처리** | HTTP 에러 수동 체크 필요 | HTTP 에러도 자동 catch |
+| **POST 요청** | `JSON.stringify()` + 헤더 설정 | 객체 그대로 전달 |
+| **인터셉터** | 없음 | 지원 (공통 처리) |
+| **요청 취소** | AbortController 직접 사용 | CancelToken 또는 AbortController |
+| **타임아웃** | 직접 구현 필요 | `timeout` 옵션 |
+| **전역 설정** | 없음 | `axios.defaults` 지원 |
+| **구조 분해** | 2단계 필요 | 바로 가능 |
+
+**결론:** axios는 fetch보다 **코드가 더 간결하고**, **에러 처리가 더 쉬우며**, **고급 기능을 더 쉽게 사용**할 수 있어서 실무에서 널리 사용됩니다.
 
 ### **라이브러리 설치**
 

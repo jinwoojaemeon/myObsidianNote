@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/스프링 프레임워크 (Spring Framework).md",
+                "file": "Spring/IoC와 DI (제어의 역전과 의존성 주입).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "스프링 프레임워크 (Spring Framework)"
+              "title": "IoC와 DI (제어의 역전과 의존성 주입)"
             }
           }
         ]
@@ -172,6 +172,9 @@
   },
   "active": "f160edbeafd50bac",
   "lastOpenFiles": [
+    "Spring/Spring Data JPA.md",
+    "Spring/스프링 프레임워크 (Spring Framework).md",
+    "Spring/IoC와 DI (제어의 역전과 의존성 주입).md",
     "SQL/DML, DDL, DCL (SQL 언어 분류).md",
     "SQL/정규화 (Normalization).md",
     "SQL/트랜잭션 (Transaction).md",
@@ -195,9 +198,6 @@
     "Spring/H2 Database (H2 데이터베이스).md",
     "Java/자바 제네릭 (Generics).md",
     "Spring/N+1 문제 (JPA).md",
-    "Spring/JPA와 ORM (SQL 중심 개발 vs ORM).md",
-    "Java/자바 컴파일.md",
-    "Spring/DTO (Data Transfer Object).md",
     "Spring",
     "images.png",
     "react",

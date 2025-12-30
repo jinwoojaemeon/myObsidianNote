@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/스프링 어노테이션 (Spring Annotations).md",
+                "file": "Java/가비지 컬렉션 (Garbage Collection).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "스프링 어노테이션 (Spring Annotations)"
+              "title": "가비지 컬렉션 (Garbage Collection)"
             }
           }
         ]
@@ -172,10 +172,15 @@
   },
   "active": "f160edbeafd50bac",
   "lastOpenFiles": [
-    "Spring/스프링 빈 (Spring Bean).md",
-    "Spring/스프링 어노테이션 (Spring Annotations).md",
-    "Spring/스프링 부트 (Spring Boot).md",
+    "Spring/Spring 예외 처리 (Exception Handling).md",
     "Spring/IoC와 DI (제어의 역전과 의존성 주입).md",
+    "Spring/스프링 어노테이션 (Spring Annotations).md",
+    "Spring/N+1 문제 (JPA).md",
+    "Spring/JPQL과 객체지향 쿼리 언어.md",
+    "Spring/JPA와 ORM (SQL 중심 개발 vs ORM).md",
+    "Spring/JPA 연관관계 매핑.md",
+    "Spring/스프링 빈 (Spring Bean).md",
+    "Spring/스프링 부트 (Spring Boot).md",
     "Spring/Spring Data JPA.md",
     "Spring/스프링 프레임워크 (Spring Framework).md",
     "SQL/DML, DDL, DCL (SQL 언어 분류).md",
@@ -185,7 +190,6 @@
     "Spring/API (Application Programming Interface).md",
     "Spring/RESTful API (REST API).md",
     "Java/람다 표현식 (Lambda Expression).md",
-    "Spring/JPQL과 객체지향 쿼리 언어.md",
     "Java/Optional.md",
     "Java/Stream API.md",
     "Java/메서드 참조 (Method Reference).md",
@@ -194,10 +198,6 @@
     "Java/가비지 컬렉션 (Garbage Collection).md",
     "SQL/RDBMS (관계형 데이터베이스 관리 시스템).md",
     "Spring/JPA 엔티티 매핑.md",
-    "react/React 개발 도구와 라이브러리.md",
-    "react/React 비동기 처리 (Promise, async-await, fetch, axios).md",
-    "react/Zustand (상태관리 라이브러리).md",
-    "Spring/spring-boot-starter-data-jpa와 영속성 관리.md",
     "Spring",
     "images.png",
     "react",

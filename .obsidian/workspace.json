@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spring/N+1 문제 (JPA).md",
+                "file": "Java/SOLID 원칙 (객체지향 설계 원칙).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "N+1 문제 (JPA)"
+              "title": "SOLID 원칙 (객체지향 설계 원칙)"
             }
           }
         ]
@@ -172,13 +172,16 @@
   },
   "active": "f160edbeafd50bac",
   "lastOpenFiles": [
+    "Java/오버로딩과 오버라이딩 (Overloading vs Overriding).md",
+    "Java/JVM Runtime Data Area - 메모리 구조.md",
+    "Java/JVM (Java Virtual Machine, 자바 가상 머신).md",
+    "Network/TCP와 UDP의 차이점.md",
+    "Spring/N+1 문제 (JPA).md",
     "네트워크/DNS (Domain Name System).md",
     "네트워크",
     "SQL/Inner Join과 Outer Join.md",
     "Spring/Application Context.md",
     "Java/가비지 컬렉션 (Garbage Collection).md",
-    "Java/JVM (Java Virtual Machine, 자바 가상 머신).md",
-    "Spring/N+1 문제 (JPA).md",
     "Spring/ORM (Object-Relational Mapping).md",
     "Spring/JPA와 ORM (SQL 중심 개발 vs ORM).md",
     "Spring/JPA vs MyBatis 비교.md",
@@ -192,13 +195,10 @@
     "Java/람다 표현식 (Lambda Expression).md",
     "Java/객체지향 프로그래밍 (OOP).md",
     "Java/메서드 참조 (Method Reference).md",
-    "Java/오버로딩과 오버라이딩 (Overloading vs Overriding).md",
     "Java/자바 제네릭 (Generics).md",
     "Java/자바 컴파일.md",
     "Java/상속과 컴포지션 (Inheritance vs Composition).md",
-    "Java/JVM Runtime Data Area - 메모리 구조.md",
     "Java/자바 다형성 (Polymorphism).md",
-    "Java/자바 예외 처리 (Exception).md",
     "Spring",
     "images.png",
     "react",
